@@ -1,0 +1,77 @@
+CUDA_VISIBLE_DEVICES="5,6,7" ipython notebook --no-browser --port=1301
+CUDA_VISIBLE_DEVICES="4,5,6,7" ipython notebook --no-browser --port=1302
+
+or
+
+inside jupyter:
+os.environ["CUDA_VISIBLE_DEVICES"]="4,5,6,7"
+
+*******************************************************************************************************************
+1. CD to data_home
+2. Create venv inside data_home
+
+      python3.6 -m venv venv/
+      source venv/bin/activate
+
+3. install jupyter notebook inside venv
+
+      (venv)$ pip install –upgrade pip
+      (venv)$ pip install ipython
+      (venv)$ pip install jupyter
+
+4. install keras and tensorflow
+
+      pip install keras
+
+      pip uninstall tensorflow-gpu
+      pip install --upgrade tensorflow-gpu==1.4
+
+5.  transfer port of jupyter notebook from ssh to local
+  connect to remote (ssh user@host)
+    remote_user@remote_host$ jupyter notebook --no-browser --port=1301
+
+  on local
+    ssh -N -f -L localhost:8888:localhost:1301 remote_user@remote_host
+
+
+6. open a browser
+    localhost:8888
+
+****************************************************************
+remote_user@remote_host$ jupyter notebook --no-browser --port=1302
+
+on local
+ssh -N -f -L localhost:1980:localhost:1302 remote_user@remote_host
+localhost:1980
+
+**************************************************************************************************************
+Kill a process
+ps aux | grep localhost:8889
+kill 1657
+
+ps aux | grep localhost:1301
+kill 1854
+
+
+*************************************************************************************************************
+*************************************************************************************************************
+*************************************************************************************************************
+*************************************************************************************************************
+Copy from local to remote using ssh
+
+scp -r 0.Thyroid/data sah623@octopus:data_home/venv/0.Thyroid/
+
+
+Copy from server to local
+scp -r sah623@octopus:data_home/venv2/0.Thyroid-Main/  0.from_server/
+
+*************************************************************************************************************
+*************************************************************************************************************
+*************************************************************************************************************
+*************************************************************************************************************
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+
+pip uninstall tensorflow-gpu
+pip install --ignore-installed --upgrade keras==2.0.8
+pip install --ignore-installed --upgrade tensorflow-gpu==1.4.0
