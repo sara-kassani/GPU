@@ -1,0 +1,999 @@
+[hosseinzadehkassani@login02 ~]$ wget
+wget: missing URL
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help' for more options.
+[hosseinzadehkassani@login02 ~]$ https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+-bash: https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh: No such file or directory
+[hosseinzadehkassani@login02 ~]$ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+--2023-09-07 09:28:10--  https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+Resolving repo.anaconda.com (repo.anaconda.com)... 104.16.130.3, 104.16.131.3, 2606:4700::6810:8303, ...
+Connecting to repo.anaconda.com (repo.anaconda.com)|104.16.130.3|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 103219356 (98M) [application/x-sh]
+Saving to: ‘Miniconda3-latest-Linux-x86_64.sh’
+
+Miniconda3-latest-Linux-x86_64.sh        100%[==================================================================================>]  98.44M   121MB/s    in 0.8s
+
+2023-09-07 09:28:11 (121 MB/s) - ‘Miniconda3-latest-Linux-x86_64.sh’ saved [103219356/103219356]
+
+[hosseinzadehkassani@login02 ~]$ clear
+[hosseinzadehkassani@login02 ~]$ ls
+example_gpu.sh  gpu2  gpu3  gpu4  gpu5  Miniconda3-latest-Linux-x86_64.sh  python_gpu_script.py  test_gpu_3.7
+[hosseinzadehkassani@login02 ~]$ chmod +x Miniconda3-latest-Linux-x86_64.sh
+[hosseinzadehkassani@login02 ~]$ ./Miniconda3-latest-Linux-x86_64.sh
+
+Welcome to Miniconda3 py311_23.5.2-0
+
+In order to continue the installation process, please review the license
+agreement.
+Please, press ENTER to continue
+>>>
+======================================
+End User License Agreement - Miniconda
+======================================
+
+Copyright 2015-2023, Anaconda, Inc.
+
+All rights reserved under the 3-clause BSD License:
+
+This End User License Agreement (the "Agreement") is a legal agreement between you and Anaconda, Inc. ("Anaconda") and governs your use of Miniconda.
+
+Subject to the terms of this Agreement, Anaconda hereby grants you a non-exclusive, non-transferable license to:
+
+  * Install and use the Miniconda,
+  * Modify and create derivative works of sample source code delivered in Miniconda subject to the Terms of Service for the Repository (as defined hereinafter) avai
+lable at https://www.anaconda.com/terms-of-service, and
+  * Redistribute code files in source (if provided to you by Anaconda as source) and binary forms, with or without modification subject to the requirements set fort
+h below.
+
+Anaconda may, at its option, make available patches, workarounds or other updates to Miniconda. Unless the updates are provided with their separate governing terms,
+ they are deemed part of Miniconda licensed to you as provided in this Agreement. This Agreement does not entitle you to any support for Miniconda.
+
+Anaconda reserves all rights not expressly granted to you in this Agreement.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other
+ materials provided with the distribution.
+  * Neither the name of Anaconda nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior writ
+ten permission.
+
+You acknowledge that, as between you and Anaconda, Anaconda owns all right, title, and interest, including all intellectual property rights, in and to Miniconda and
+, with respect to third-party products distributed with or through Miniconda, the applicable third-party licensors own all right, title and interest, including all
+intellectual property rights, in and to such products. If you send or transmit any communications or materials to Anaconda suggesting or recommending changes to the
+ software or documentation, including without limitation, new features or functionality relating thereto, or any comments, questions, suggestions or the like ("Feed
+back"), Anaconda is free to use such Feedback. You hereby assign to Anaconda all right, title, and interest in, and Anaconda is free to use, without any attribution
+ or compensation to any party, any ideas, know-how, concepts, techniques or other intellectual property rights contained in the Feedback, for any purpose whatsoever
+, although Anaconda is not required to use any Feedback.
+
+DISCLAIMER
+==========
+
+THIS SOFTWARE IS PROVIDED BY ANACONDA AND ITS CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF M
+ERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL ANACONDA BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, O
+R CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVE
+R CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THI
+S SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, ANACONDA AND ITS AFFILIATES SHALL NOT BE LIABLE FOR ANY SPECIAL, INCIDENTAL, PUNITIVE OR CONSEQUENTIAL DAMAGES, OR ANY LOST
+PROFITS, LOSS OF USE, LOSS OF DATA OR LOSS OF GOODWILL, OR THE COSTS OF PROCURING SUBSTITUTE PRODUCTS, ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT OR THE US
+E OR PERFORMANCE OF MINICONDA, WHETHER SUCH LIABILITY ARISES FROM ANY CLAIM BASED UPON BREACH OF CONTRACT, BREACH OF WARRANTY, TORT (INCLUDING NEGLIGENCE), PRODUCT
+LIABILITY OR ANY OTHER CAUSE OF ACTION OR THEORY OF LIABILITY. IN NO EVENT WILL THE TOTAL CUMULATIVE LIABILITY OF ANACONDA AND ITS AFFILIATES UNDER OR ARISING OUT O
+F THIS AGREEMENT EXCEED 10.00 U.S. DOLLARS.
+
+Miscellaneous
+=============
+
+If you want to terminate this Agreement, you may do so by discontinuing use of Miniconda. Anaconda may, at any time, terminate this Agreement and the license grante
+d hereunder if you fail to comply with any term of this Agreement. Upon any termination of this Agreement, you agree to promptly discontinue use of the Miniconda an
+d destroy all copies in your possession or control. Upon any termination of this Agreement all provisions survive except for the licenses granted to you.
+
+This Agreement is governed by and construed in accordance with the internal laws of the State of Texas without giving effect to any choice or conflict of law provis
+ion or rule that would require or permit the application of the laws of any jurisdiction other than those of the State of Texas. Any legal suit, action, or proceedi
+ng arising out of or related to this Agreement or the licenses granted hereunder by you must be instituted exclusively in the federal courts of the United States or
+ the courts of the State of Texas in each case located in Travis County, Texas, and you irrevocably submit to the jurisdiction of such courts in any such suit, acti
+on, or proceeding.
+
+Notice of Third Party Software Licenses
+=======================================
+
+Miniconda provides access to a repository (the "Repository") which contains software packages or tools licensed on an open source basis from third parties and binar
+y packages of these third party tools. These third party software packages or tools are provided on an "as is" basis and are subject to their respective license agr
+eements as well as this Agreement and the Terms of Service for the Repository located at https://www.anaconda.com/terms-of-service; provided, however, no restrictio
+n contained in the Terms of Service shall be construed so as to limit Your ability to download the packages contained in Miniconda provided you comply with the lice
+nse for each such package. These licenses may be accessed from within the Miniconda software[1] or https://www.anaconda.com/legal. Information regarding which licen
+se is applicable is available from within many of the third party software packages and tools and at https://repo.anaconda.com/pkgs/main/ and https://repo.anaconda.
+com/pkgs/r/. Anaconda reserves the right, in its sole discretion, to change which third party tools are included in the Repository accessible through Miniconda.
+
+
+Intel Math Kernel Library
+-------------------------
+
+Miniconda provides access to re-distributable, run-time, shared-library files from the Intel Math Kernel Library ("MKL binaries").
+
+Copyright 2018 Intel Corporation. License available at https://software.intel.com/en-us/license/intel-simplified-software-license (the "MKL License").
+
+You may use and redistribute the MKL binaries, without modification, provided the following conditions are met:
+
+  * Redistributions must reproduce the above copyright notice and the following terms of use in the MKL binaries and in the documentation and/or other materials pro
+vided with the distribution.
+  * Neither the name of Intel nor the names of its suppliers may be used to endorse or promote products derived from the MKL binaries without specific prior written
+ permission.
+  * No reverse engineering, decompilation, or disassembly of the MKL binaries is permitted.
+
+You are specifically authorized to use and redistribute the MKL binaries with your installation of Miniconda subject to the terms set forth in the MKL License. You
+are also authorized to redistribute the MKL binaries with Miniconda or in the Anaconda package that contains the MKL binaries. If needed, instructions for removing
+the MKL binaries after installation of Miniconda are available at https://docs.anaconda.com.
+
+cuDNN Software
+--------------
+
+Miniconda also provides access to cuDNN software binaries ("cuDNN binaries") from NVIDIA Corporation. You are specifically authorized to use the cuDNN binaries with
+ your installation of Miniconda subject to your compliance with the license agreement located at https://docs.nvidia.com/deeplearning/sdk/cudnn-sla/index.html. You
+are also authorized to redistribute the cuDNN binaries with an Miniconda package that contains the cuDNN binaries. You can add or remove the cuDNN binaries utilizin
+g the install and uninstall features in Miniconda.
+
+cuDNN binaries contain source code provided by NVIDIA Corporation.
+
+Arm Performance Libraries
+-------------------------
+
+Arm Performance Libraries (Free Version): Anaconda provides access to software and related documentation from the Arm Performance Libraries ("Arm PL") provided by A
+rm Limited. By installing or otherwise accessing the Arm PL, you acknowledge and agree that use and distribution of the Arm PL is subject to your compliance with th
+e Arm PL end user license agreement located at: https://developer.arm.com/tools-and-software/server-and-hpc/downloads/arm-performance-libraries/eula.
+
+Export; Cryptography Notice
+===========================
+
+You must comply with all domestic and international export laws and regulations that apply to the software, which include restrictions on destinations, end users, a
+nd end use. Miniconda includes cryptographic software. The country in which you currently reside may have restrictions on the import, possession, use, and/or re-exp
+ort to another country, of encryption software. BEFORE using any encryption software, please check your country's laws, regulations and policies concerning the impo
+rt, possession, or use, and re-export of encryption software, to see if this is permitted. See the Wassenaar Arrangement http://www.wassenaar.org/ for more informat
+ion.
+
+Anaconda has self-classified this software as Export Commodity Control Number (ECCN) EAR99, which includes mass market information security software using or perfor
+ming cryptographic functions with asymmetric algorithms. No license is required for export of this software to non-embargoed countries.
+
+The Intel Math Kernel Library contained in Miniconda is classified by Intel as ECCN 5D992.c with no license required for export to non-embargoed countries.
+
+The following packages listed on https://www.anaconda.com/cryptography are included in the Repository accessible through Miniconda that relate to cryptography.
+
+Last updated March 21, 2022
+
+
+Do you accept the license terms? [yes|no]
+[no] >>>yes
+Please answer 'yes' or 'no':'
+>>> yes
+
+Miniconda3 will now be installed into this location:
+/home/hosseinzadehkassani/miniconda3
+
+  - Press ENTER to confirm the location
+  - Press CTRL-C to abort the installation
+  - Or specify a different location below
+
+[/home/hosseinzadehkassani/miniconda3] >>>
+PREFIX=/home/hosseinzadehkassani/miniconda3
+Unpacking payload ...
+
+Installing base environment...
+
+
+Downloading and Extracting Packages
+
+
+Downloading and Extracting Packages
+
+Preparing transaction: done
+Executing transaction: done
+installation finished.
+Do you wish the installer to initialize Miniconda3
+by running conda init? [yes|no]
+[no] >>> yes
+no change     /home/hosseinzadehkassani/miniconda3/condabin/conda
+no change     /home/hosseinzadehkassani/miniconda3/bin/conda
+no change     /home/hosseinzadehkassani/miniconda3/bin/conda-env
+no change     /home/hosseinzadehkassani/miniconda3/bin/activate
+no change     /home/hosseinzadehkassani/miniconda3/bin/deactivate
+no change     /home/hosseinzadehkassani/miniconda3/etc/profile.d/conda.sh
+no change     /home/hosseinzadehkassani/miniconda3/etc/fish/conf.d/conda.fish
+no change     /home/hosseinzadehkassani/miniconda3/shell/condabin/Conda.psm1
+no change     /home/hosseinzadehkassani/miniconda3/shell/condabin/conda-hook.ps1
+no change     /home/hosseinzadehkassani/miniconda3/lib/python3.11/site-packages/xontrib/conda.xsh
+no change     /home/hosseinzadehkassani/miniconda3/etc/profile.d/conda.csh
+modified      /home/hosseinzadehkassani/.bashrc
+
+==> For changes to take effect, close and re-open your current shell. <==
+
+If you'd prefer that conda's base environment not be activated on startup,
+   set the auto_activate_base parameter to false:
+
+conda config --set auto_activate_base false
+
+Thank you for installing Miniconda3!
+[hosseinzadehkassani@login02 ~]$ source ~/.bashrc
+(base) [hosseinzadehkassani@login02 ~]$ ls
+example_gpu.sh  gpu2  gpu3  gpu4  gpu5  miniconda3  Miniconda3-latest-Linux-x86_64.sh  python_gpu_script.py  test_gpu_3.7
+(base) [hosseinzadehkassani@login02 ~]$ conda create -n pytorch_env python=3.10
+Retrieving notices: ...working... done
+WARNING: A conda environment already exists at '/home/hosseinzadehkassani/.conda/envs/pytorch_env'
+Remove existing environment (y/[n])? y
+Invalid choice: y
+WARNING: A conda environment already exists at '/home/hosseinzadehkassani/.conda/envs/pytorch_env'
+Remove existing environment (y/[n])? y
+
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 23.5.2
+  latest version: 23.7.3
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+Or to minimize the number of packages updated during conda update use
+
+     conda install conda=23.7.3
+
+
+
+## Package Plan ##
+
+  environment location: /home/hosseinzadehkassani/miniconda3/envs/pytorch_env
+
+  added / updated specs:
+    - python=3.10
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    ca-certificates-2023.08.22 |       h06a4308_0         123 KB
+    python-3.10.12             |       h955ad1f_0        26.8 MB
+    wheel-0.38.4               |  py310h06a4308_0          64 KB
+    ------------------------------------------------------------
+                                           Total:        27.0 MB
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main
+  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-1_gnu
+  bzip2              pkgs/main/linux-64::bzip2-1.0.8-h7b6447c_0
+  ca-certificates    pkgs/main/linux-64::ca-certificates-2023.08.22-h06a4308_0
+  ld_impl_linux-64   pkgs/main/linux-64::ld_impl_linux-64-2.38-h1181459_1
+  libffi             pkgs/main/linux-64::libffi-3.4.4-h6a678d5_0
+  libgcc-ng          pkgs/main/linux-64::libgcc-ng-11.2.0-h1234567_1
+  libgomp            pkgs/main/linux-64::libgomp-11.2.0-h1234567_1
+  libstdcxx-ng       pkgs/main/linux-64::libstdcxx-ng-11.2.0-h1234567_1
+  libuuid            pkgs/main/linux-64::libuuid-1.41.5-h5eee18b_0
+  ncurses            pkgs/main/linux-64::ncurses-6.4-h6a678d5_0
+  openssl            pkgs/main/linux-64::openssl-3.0.10-h7f8727e_2
+  pip                pkgs/main/linux-64::pip-23.2.1-py310h06a4308_0
+  python             pkgs/main/linux-64::python-3.10.12-h955ad1f_0
+  readline           pkgs/main/linux-64::readline-8.2-h5eee18b_0
+  setuptools         pkgs/main/linux-64::setuptools-68.0.0-py310h06a4308_0
+  sqlite             pkgs/main/linux-64::sqlite-3.41.2-h5eee18b_0
+  tk                 pkgs/main/linux-64::tk-8.6.12-h1ccaba5_0
+  tzdata             pkgs/main/noarch::tzdata-2023c-h04d1e81_0
+  wheel              pkgs/main/linux-64::wheel-0.38.4-py310h06a4308_0
+  xz                 pkgs/main/linux-64::xz-5.4.2-h5eee18b_0
+  zlib               pkgs/main/linux-64::zlib-1.2.13-h5eee18b_0
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate pytorch_env
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+(base) [hosseinzadehkassani@login02 ~]$ pip install monai
+Collecting monai
+  Downloading monai-1.2.0-202306081546-py3-none-any.whl (1.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 9.0 MB/s eta 0:00:00
+Collecting torch>=1.9 (from monai)
+  Downloading torch-2.0.1-cp311-cp311-manylinux1_x86_64.whl (619.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 619.9/619.9 MB 7.1 MB/s eta 0:00:00
+Collecting numpy>=1.20 (from monai)
+  Downloading numpy-1.25.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 23.5 MB/s eta 0:00:00
+Collecting filelock (from torch>=1.9->monai)
+  Downloading filelock-3.12.3-py3-none-any.whl (11 kB)
+Collecting typing-extensions (from torch>=1.9->monai)
+  Using cached typing_extensions-4.7.1-py3-none-any.whl (33 kB)
+Collecting sympy (from torch>=1.9->monai)
+  Downloading sympy-1.12-py3-none-any.whl (5.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.7/5.7 MB 41.7 MB/s eta 0:00:00
+Collecting networkx (from torch>=1.9->monai)
+  Downloading networkx-3.1-py3-none-any.whl (2.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 38.5 MB/s eta 0:00:00
+Collecting jinja2 (from torch>=1.9->monai)
+  Using cached Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Collecting nvidia-cuda-nvrtc-cu11==11.7.99 (from torch>=1.9->monai)
+  Downloading nvidia_cuda_nvrtc_cu11-11.7.99-2-py3-none-manylinux1_x86_64.whl (21.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.0/21.0 MB 44.3 MB/s eta 0:00:00
+Collecting nvidia-cuda-runtime-cu11==11.7.99 (from torch>=1.9->monai)
+  Downloading nvidia_cuda_runtime_cu11-11.7.99-py3-none-manylinux1_x86_64.whl (849 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 849.3/849.3 kB 23.8 MB/s eta 0:00:00
+Collecting nvidia-cuda-cupti-cu11==11.7.101 (from torch>=1.9->monai)
+  Downloading nvidia_cuda_cupti_cu11-11.7.101-py3-none-manylinux1_x86_64.whl (11.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.8/11.8 MB 35.6 MB/s eta 0:00:00
+Collecting nvidia-cudnn-cu11==8.5.0.96 (from torch>=1.9->monai)
+  Downloading nvidia_cudnn_cu11-8.5.0.96-2-py3-none-manylinux1_x86_64.whl (557.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 557.1/557.1 MB 8.9 MB/s eta 0:00:00
+Collecting nvidia-cublas-cu11==11.10.3.66 (from torch>=1.9->monai)
+  Downloading nvidia_cublas_cu11-11.10.3.66-py3-none-manylinux1_x86_64.whl (317.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 317.1/317.1 MB 13.5 MB/s eta 0:00:00
+Collecting nvidia-cufft-cu11==10.9.0.58 (from torch>=1.9->monai)
+  Downloading nvidia_cufft_cu11-10.9.0.58-py3-none-manylinux1_x86_64.whl (168.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 168.4/168.4 MB 21.1 MB/s eta 0:00:00
+Collecting nvidia-curand-cu11==10.2.10.91 (from torch>=1.9->monai)
+  Downloading nvidia_curand_cu11-10.2.10.91-py3-none-manylinux1_x86_64.whl (54.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.6/54.6 MB 22.9 MB/s eta 0:00:00
+Collecting nvidia-cusolver-cu11==11.4.0.1 (from torch>=1.9->monai)
+  Downloading nvidia_cusolver_cu11-11.4.0.1-2-py3-none-manylinux1_x86_64.whl (102.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 102.6/102.6 MB 33.3 MB/s eta 0:00:00
+Collecting nvidia-cusparse-cu11==11.7.4.91 (from torch>=1.9->monai)
+  Downloading nvidia_cusparse_cu11-11.7.4.91-py3-none-manylinux1_x86_64.whl (173.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 173.2/173.2 MB 25.5 MB/s eta 0:00:00
+Collecting nvidia-nccl-cu11==2.14.3 (from torch>=1.9->monai)
+  Downloading nvidia_nccl_cu11-2.14.3-py3-none-manylinux1_x86_64.whl (177.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 177.1/177.1 MB 4.1 MB/s eta 0:00:00
+Collecting nvidia-nvtx-cu11==11.7.91 (from torch>=1.9->monai)
+  Downloading nvidia_nvtx_cu11-11.7.91-py3-none-manylinux1_x86_64.whl (98 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.6/98.6 kB 3.8 MB/s eta 0:00:00
+Collecting triton==2.0.0 (from torch>=1.9->monai)
+  Downloading triton-2.0.0-1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (63.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.3/63.3 MB 42.3 MB/s eta 0:00:00
+Requirement already satisfied: setuptools in /home/hosseinzadehkassani/miniconda3/lib/python3.11/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch>=1.9->monai) (67.8.0)
+Requirement already satisfied: wheel in /home/hosseinzadehkassani/miniconda3/lib/python3.11/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch>=1.9->monai) (0.38.4)
+Collecting cmake (from triton==2.0.0->torch>=1.9->monai)
+  Downloading cmake-3.27.4.1-py2.py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (26.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 26.1/26.1 MB 40.9 MB/s eta 0:00:00
+Collecting lit (from triton==2.0.0->torch>=1.9->monai)
+  Downloading lit-16.0.6.tar.gz (153 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 153.7/153.7 kB 4.2 MB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting MarkupSafe>=2.0 (from jinja2->torch>=1.9->monai)
+  Downloading MarkupSafe-2.1.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (28 kB)
+Collecting mpmath>=0.19 (from sympy->torch>=1.9->monai)
+  Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 14.9 MB/s eta 0:00:00
+Building wheels for collected packages: lit
+  Building wheel for lit (pyproject.toml) ... done
+  Created wheel for lit: filename=lit-16.0.6-py3-none-any.whl size=93584 sha256=c286e622b57878d4a93fecd0287d2bc6aaf596eb71b573fd0ba39d60e3b6058b
+  Stored in directory: /ceph/chpc/home/hosseinzadehkassani/.cache/pip/wheels/ab/84/e4/5af8c76af9e5bee472e825f1451c18bb3b261d80a7b3ec7f8a
+Successfully built lit
+Installing collected packages: mpmath, lit, cmake, typing-extensions, sympy, nvidia-nvtx-cu11, nvidia-nccl-cu11, nvidia-cusparse-cu11, nvidia-curand-cu11, nvidia-cufft-cu11, nvidia-cuda-runtime-cu11, nvidia-cuda-nvrtc-cu11, nvidia-cuda-cupti-cu11, nvidia-cublas-cu11, numpy, networkx, MarkupSafe, filelock, nvidia-cusolver-cu11, nvidia-cudnn-cu11, jinja2, triton, torch, monai
+
+Successfully installed MarkupSafe-2.1.3 cmake-3.27.4.1 filelock-3.12.3 jinja2-3.1.2 lit-16.0.6 monai-1.2.0 mpmath-1.3.0 networkx-3.1 numpy-1.25.2 nvidia-cublas-cu11-11.10.3.66 nvidia-cuda-cupti-cu11-11.7.101 nvidia-cuda-nvrtc-cu11-11.7.99 nvidia-cuda-runtime-cu11-11.7.99 nvidia-cudnn-cu11-8.5.0.96 nvidia-cufft-cu11-10.9.0.58 nvidia-curand-cu11-10.2.10.91 nvidia-cusolver-cu11-11.4.0.1 nvidia-cusparse-cu11-11.7.4.91 nvidia-nccl-cu11-2.14.3 nvidia-nvtx-cu11-11.7.91 sympy-1.12 torch-2.0.1 triton-2.0.0 typing-extensions-4.7.1
+(base) [hosseinzadehkassani@login02 ~]$
+(base) [hosseinzadehkassani@login02 ~]$ conda activate pytorch_env
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ module list
+No modules loaded
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ module avail
+
+---------------------------------------------------------------------- /usr/share/modulefiles ----------------------------------------------------------------------
+   mpi/mpich-x86_64    mpi/openmpi-x86_64 (D)    pmi/pmix-x86_64
+
+------------------------------------------------------------------------- /opt/modulefiles -------------------------------------------------------------------------
+   afni/20.3.03           cuda/11.2                   gate/9.1                matlab/R2021a                          openmpi/4.0.2-gcc-8.3.1
+   amber/18.17            cuda/11.3                   gaussian/g09            minc_v2_toolkit/1.9.18.2               openmpi/4.0.2-intel-19.1.0.166 (D)
+   ants/2.3.1             cudnn/7.6.5                 gcc/8.3.1        (D)    moose/0.1.0                            openslide/3.4.1
+   ants/2.3.5             cudnn/8.1.1          (D)    gcc/9.3.0               mpich/3.3.1-gcc-8.3.1                  perl/5.10.1
+   ants/2.4.0      (D)    dcm2niix/7.20.22            gcc/10.2.0              mpich/3.3.1-intel-19.1.0.166    (D)    plink/1.9
+   apptainer/1.1.3        dcmtk/3.6.7                 geant4/10.7.1           mricron/20161012                       plink/2.0                      (D)
+   beast/1.15             dramms/1.5.1                gnutils/3.6.9           mricron/20190902                (D)    python/2.7.16
+   c3d/1.0                elastix/5.0.1               go/1.13                 mvapich2/2.3.2-gcc-8.3.1               python/3.6.5
+   captk/1.8.0            ffmpeg/5.1.2                go/1.15.6               mvapich2/2.3.2-intel-19.1.0.166 (D)    python/3.7.4
+   captk/1.9.0     (D)    fftw/3.3.10                 go/1.17.5               netcdf/4.3.3.1                         python/3.8.3
+   cmake/3.14.5           freesurfer/5.3.0-HCP        go/1.19.2        (D)    netcdf/4.9.2                    (D)    python/3.9.12
+   cmake/3.20.0    (D)    freesurfer/5.3.0            greedy/1.0.1            nifti/3.0                              python/3.10.9                  (D)
+   cuda/6.0               freesurfer/6.0.0            gsl/2.7.1               node/19.0.0                            root/6.20.02
+   cuda/7.5               freesurfer/7.1.1            hdf5/1.15               octave/6.4.0                           singularity/3.5.2
+   cuda/9.1               freesurfer/7.2.0     (D)    intel/19.1.0.166        octave/7.3.0                    (D)    singularity/3.7.0
+   cuda/10.1              fsl/5.0.9                   itk/4.13                openblas/0.3.21                        singularity/3.9.0              (D)
+   cuda/10.2       (D)    fsl/5.0.10                  itk/5.2.1               openblas/0.3.23                 (D)    spm/12
+   cuda/11.0              fsl/6.0.4                   itk/5.3          (D)    openmpi/3.1.4-gcc-8.3.1                vtk/9.2.6
+   cuda/11.1              fsl/6.0.5            (D)    itksnap/3.8.0           openmpi/3.1.4-intel-19.1.0.166         workbench/1.5.0
+
+-------------------------------------------------------------- /usr/share/lmod/lmod/modulefiles/Core ---------------------------------------------------------------
+   lmod    settarg
+
+  Where:
+   D:  Default Module
+
+If the avail list is too long consider trying:
+
+"module --default avail" or "ml -d av" to just list the default modules.
+"module overview" or "ml ov" to display the number of modules for each name.
+
+Use "module spider" to find all possible modules and extensions.
+Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
+
+
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ module load cud
+cuda         cuda/10.2    cuda/11.1    cuda/11.3    cuda/7.5     cudnn        cudnn/8.1.1
+cuda/10.1    cuda/11.0    cuda/11.2    cuda/6.0     cuda/9.1     cudnn/7.6.5
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ ls
+example_gpu.sh  gpu2  gpu3  gpu4  gpu5  miniconda3  Miniconda3-latest-Linux-x86_64.sh  python_gpu_script.py  test_gpu_3.7
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ sbatch example_gpu.sh sbatch example_gpu.sh
+Submitted batch job 3932221
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ squeue -u $USER
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           3932221       gpu name_job hosseinz PD       0:00      1 (Priority)
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ watch squeue -u $USER
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ squeue -u $USER
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           3932221       gpu name_job hosseinz PD       0:00      1 (Priority)
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ scancel -u $USER
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ squeue -u $USER
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ sinfo
+PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
+test         up    4:00:00      4   idle node[01-04]
+small*       up 1-00:00:00     12    mix node[15-16,18-22,28-32]
+small*       up 1-00:00:00     16   idle node[05-14,17,23-27]
+medium       up 7-00:00:00     12    mix node[15-16,18-22,28-32]
+medium       up 7-00:00:00     20   idle node[01-14,17,23-27]
+large        up 7-00:00:00      4   idle node[01-04]
+gpu          up 7-00:00:00      2  alloc gpu[06-07]
+gpu          up 7-00:00:00      1   resv gpu08
+gpu          up 7-00:00:00      4    mix gpu[01-02,04-05]
+gpu          up 7-00:00:00      1   idle gpu03
+gpu_large    up 14-00:00:0      2  alloc gpu[06-07]
+gpu_large    up 14-00:00:0      1   resv gpu08
+gpu_large    up 14-00:00:0      4    mix gpu[01-02,04-05]
+gpu_large    up 14-00:00:0      1   idle gpu03
+highmem      up 7-00:00:00      1   resv highmem02
+highmem      up 7-00:00:00      1   idle highmem01
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ squeue -t running | head
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           3855509       gpu     bash chunhuiy  R 5-10:31:18      1 gpu05
+           3856408       gpu AR_patch zhehao.z  R 2-16:26:09      1 gpu02
+           3856412       gpu AR_patch zhehao.z  R 2-16:24:42      1 gpu02
+           3860461       gpu AR_patch zhehao.z  R 2-09:13:12      1 gpu05
+           3860468       gpu AR_patch zhehao.z  R 2-08:28:11      1 gpu02
+           3932212       gpu     bash chunhuiy  R   12:55:07      1 gpu02
+           3932213       gpu     bash chunhuiy  R   10:42:07      1 gpu04
+           3932215       gpu     bash chunhuiy  R   10:42:07      1 gpu04
+           3910925       gpu Train_QC peijie.q  R 1-11:39:33      1 gpu07
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ scontrol show jobid=385509
+slurm_load_jobs error: Invalid job id specified
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ scontrol show job=385509
+slurm_load_jobs error: Invalid job id specified
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ scontrol show jobid=3855509
+JobId=3855509 JobName=bash
+   UserId=chunhuiyang(1939128) GroupId=domain users(1000070) MCS_label=N/A
+   Priority=11698 Nice=0 Account=joseph_osullivan QOS=gpu_32_168h
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=0 Reboot=0 ExitCode=0:0
+   RunTime=5-10:32:15 TimeLimit=6-00:00:00 TimeMin=N/A
+   SubmitTime=2023-09-01T23:16:31 EligibleTime=2023-09-01T23:16:31
+   AccrueTime=2023-09-01T23:16:31
+   StartTime=2023-09-01T23:16:41 EndTime=2023-09-07T23:16:41 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2023-09-01T23:16:41 Scheduler=Main
+   Partition=gpu AllocNode:Sid=login01:2777264
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=gpu05
+   BatchHost=gpu05
+   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=1,mem=6000M,node=1,billing=1,gres/gpu=1
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryCPU=6000M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=bash
+   WorkDir=/ceph/chpc/home/chunhuiyang
+   Power=
+   TresPerNode=gres:gpu:1
+
+
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ ls
+example_gpu.sh  gpu2  gpu3  gpu4  gpu5  miniconda3  Miniconda3-latest-Linux-x86_64.sh  python_gpu_script.py  test_gpu_3.7  vat_sat
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ cd vat_sat/
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ ls
+data  example_gpu.sh  test_gpu_pytorch_monai_segmentation.py
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ vi example_gpu.sh
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ ls
+data  example_gpu.sh  test_gpu_pytorch_monai_segmentation.py
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ sbatch example_gpu.sh
+Submitted batch job 3932222
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ watch squeue -u $USER
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ ls
+data  example_gpu.sh  test_gpu_pytorch_monai_segmentation.py  test_job.stderr.txt  test_job.stdout.txt
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ less test_job.stderr.txt
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ vi example_gpu.sh
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ sbatch example_gpu.sh
+Submitted batch job 3932223
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ s
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ watch squeue -u $USER
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ ls
+data  example_gpu.sh  test_gpu_pytorch_monai_segmentation.py  test_job.stderr.txt  test_job.stdout.txt
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ less test_job.stderr.txt
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ ls -lah -t ~
+total 99M
+drwxr-xr-x   3 hosseinzadehkassani domain users    5 Sep  7 09:59 vat_sat
+drwx------  20 hosseinzadehkassani domain users   30 Sep  7 09:59 .
+-rw-------   1 hosseinzadehkassani domain users 1.4K Sep  7 09:59 .viminfo
+-rw-------   1 hosseinzadehkassani domain users  911 Sep  7 09:29 .bashrc
+drwxr-xr-x  18 hosseinzadehkassani domain users   17 Sep  7 09:29 miniconda3
+-rw-------   1 hosseinzadehkassani domain users  915 Sep  7 08:49 .Xauthority
+-rw-------   1 hosseinzadehkassani domain users  15K Aug 30 14:47 .bash_history
+drwxr-xr-x   2 hosseinzadehkassani domain users    1 Aug 30 12:22 .jupyter
+drwxr-xr-x   2 hosseinzadehkassani domain users    0 Aug 30 12:17 .ipython
+-rw-------   1 hosseinzadehkassani domain users  936 Aug 30 12:17 .python_history
+drwxr-xr-x   2 hosseinzadehkassani domain users    0 Aug 30 12:01 gpu5
+drwxr-xr-x   3 hosseinzadehkassani domain users    2 Aug 30 11:23 gpu4
+drwx------   3 hosseinzadehkassani domain users    1 Aug 29 17:25 .nv
+drwxr-xr-x   3 hosseinzadehkassani domain users    4 Aug 29 16:01 gpu3
+-rw-r--r--   1 hosseinzadehkassani domain users 1.1K Aug 29 16:00 example_gpu.sh
+-rw-r--r--   1 hosseinzadehkassani domain users  367 Aug 29 15:57 python_gpu_script.py
+drwxr-xr-x   4 hosseinzadehkassani domain users    3 Aug 29 15:55 .conda
+drwxr-xr-x   3 hosseinzadehkassani domain users    1 Aug 29 15:16 gpu2
+drwxr-xr-x   4 hosseinzadehkassani domain users    5 Aug 29 13:17 test_gpu_3.7
+drwxr-xr-x   2 hosseinzadehkassani domain users    1 Aug 29 11:05 .keras
+drwx------   4 hosseinzadehkassani domain users    2 Aug 29 10:21 .cache
+drwxr-xr-x   3 hosseinzadehkassani domain users    1 Aug 28 13:15 .local
+drwxr-xr-x 278 root                root          280 Aug 27 14:12 ..
+drwx------   2 hosseinzadehkassani domain users    1 Aug 17 13:57 .ssh
+drwx------   3 hosseinzadehkassani domain users    1 Aug 17 13:55 .config
+-rw-------   1 hosseinzadehkassani domain users   16 Aug 17 13:55 .esd_auth
+drwx------   3 hosseinzadehkassani domain users    1 Aug 17 13:55 .dbus
+-rw-------   1 hosseinzadehkassani domain users   18 Aug  8 11:09 .bash_logout
+-rw-------   1 hosseinzadehkassani domain users  141 Aug  8 11:09 .bash_profile
+-rw-------   1 hosseinzadehkassani domain users  334 Aug  8 11:09 .emacs
+drwx------   4 hosseinzadehkassani domain users    2 Aug  8 11:09 .mozilla
+-rwxr-xr-x   1 hosseinzadehkassani domain users  99M Jul 13 14:01 Miniconda3-latest-Linux-x86_64.sh
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ vi example_gpu.sh
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ source ~/.bashrc
+(base) [hosseinzadehkassani@login02 vat_sat]$ conda activate pytorch_env
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ vi example_gpu.sh
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ less test_job.stderr.txt
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ sbatch example_gpu.sh
+Submitted batch job 3932224
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ watch squeue
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ watch squeue -u $USER
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ ls
+data  example_gpu.sh  test_gpu_pytorch_monai_segmentation.py  test_job.stderr.txt  test_job.stdout.txt
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ less test_job.stderr.txt
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ pip install numpy
+Collecting numpy
+  Obtaining dependency information for numpy from https://files.pythonhosted.org/packages/71/3c/3b1981c6a1986adc9ee7db760c0c34ea5b14ac3da9ecfcf1ea2a4ec6c398/numpy-1.25.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Downloading numpy-1.25.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.6 kB)
+Downloading numpy-1.25.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 38.4 MB/s eta 0:00:00
+Installing collected packages: numpy
+Successfully installed numpy-1.25.2
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ less test_gpu_pytorch_monai_segmentation.py
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ pip install matplotlib pandas sklearn scikit-learn
+Collecting matplotlib
+  Obtaining dependency information for matplotlib from https://files.pythonhosted.org/packages/c2/da/a5622266952ab05dc3995d77689cba600e49ea9d6c51d469c077695cb719/matplotlib-3.7.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Downloading matplotlib-3.7.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.6 kB)
+Collecting pandas
+  Obtaining dependency information for pandas from https://files.pythonhosted.org/packages/fb/4f/4a4372b2e24439f559b73318683486831d75e59544ae02bf8dec8dd6f48b/pandas-2.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Downloading pandas-2.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+Collecting sklearn
+  Downloading sklearn-0.0.post9.tar.gz (3.6 kB)
+  Preparing metadata (setup.py) ... error
+  error: subprocess-exited-with-error
+
+  × python setup.py egg_info did not run successfully.
+  │ exit code: 1
+  ╰─> [18 lines of output]
+      The 'sklearn' PyPI package is deprecated, use 'scikit-learn'
+      rather than 'sklearn' for pip commands.
+
+      Here is how to fix this error in the main use cases:
+      - use 'pip install scikit-learn' rather than 'pip install sklearn'
+      - replace 'sklearn' by 'scikit-learn' in your pip requirements files
+        (requirements.txt, setup.py, setup.cfg, Pipfile, etc ...)
+      - if the 'sklearn' package is used by one of your dependencies,
+        it would be great if you take some time to track which package uses
+        'sklearn' instead of 'scikit-learn' and report it to their issue tracker
+      - as a last resort, set the environment variable
+        SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True to avoid this error
+
+      More information is available at
+      https://github.com/scikit-learn/sklearn-pypi-package
+
+      If the previous advice does not cover your use case, feel free to report it at
+      https://github.com/scikit-learn/sklearn-pypi-package/issues/new
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ pip install matplotlib pandas scikit-learn
+Collecting matplotlib
+  Obtaining dependency information for matplotlib from https://files.pythonhosted.org/packages/c2/da/a5622266952ab05dc3995d77689cba600e49ea9d6c51d469c077695cb719/matplotlib-3.7.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Using cached matplotlib-3.7.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.6 kB)
+Collecting pandas
+  Obtaining dependency information for pandas from https://files.pythonhosted.org/packages/fb/4f/4a4372b2e24439f559b73318683486831d75e59544ae02bf8dec8dd6f48b/pandas-2.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Using cached pandas-2.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+Collecting scikit-learn
+  Obtaining dependency information for scikit-learn from https://files.pythonhosted.org/packages/5c/e9/ee572691a3fb05555bcde41826faad29ae4bc1fb07982e7f53d54a176879/scikit_learn-1.3.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Downloading scikit_learn-1.3.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Collecting contourpy>=1.0.1 (from matplotlib)
+  Obtaining dependency information for contourpy>=1.0.1 from https://files.pythonhosted.org/packages/aa/55/02c6d24804592b862b38a85c9b3283edc245081390a520ccd11697b6b24f/contourpy-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Downloading contourpy-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.7 kB)
+Collecting cycler>=0.10 (from matplotlib)
+  Downloading cycler-0.11.0-py3-none-any.whl (6.4 kB)
+Collecting fonttools>=4.22.0 (from matplotlib)
+  Obtaining dependency information for fonttools>=4.22.0 from https://files.pythonhosted.org/packages/2b/e8/61b8525acf26ec222518bdff127ae502bfa3408981fb5e5493f2b037d7fb/fonttools-4.42.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Downloading fonttools-4.42.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (150 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.0/151.0 kB 3.0 MB/s eta 0:00:00
+Collecting kiwisolver>=1.0.1 (from matplotlib)
+  Obtaining dependency information for kiwisolver>=1.0.1 from https://files.pythonhosted.org/packages/6f/40/4ab1fdb57fced80ce5903f04ae1aed7c1d5939dda4fd0c0aa526c12fe28a/kiwisolver-1.4.5-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata
+  Downloading kiwisolver-1.4.5-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (6.4 kB)
+Requirement already satisfied: numpy>=1.20 in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from matplotlib) (1.25.2)
+Collecting packaging>=20.0 (from matplotlib)
+  Using cached packaging-23.1-py3-none-any.whl (48 kB)
+Collecting pillow>=6.2.0 (from matplotlib)
+  Obtaining dependency information for pillow>=6.2.0 from https://files.pythonhosted.org/packages/3d/36/e78f09d510354977e10102dd811e928666021d9c451e05df962d56477772/Pillow-10.0.0-cp310-cp310-manylinux_2_28_x86_64.whl.metadata
+  Downloading Pillow-10.0.0-cp310-cp310-manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+Collecting pyparsing<3.1,>=2.3.1 (from matplotlib)
+  Downloading pyparsing-3.0.9-py3-none-any.whl (98 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.3/98.3 kB 3.3 MB/s eta 0:00:00
+Collecting python-dateutil>=2.7 (from matplotlib)
+  Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Collecting pytz>=2020.1 (from pandas)
+  Obtaining dependency information for pytz>=2020.1 from https://files.pythonhosted.org/packages/32/4d/aaf7eff5deb402fd9a24a1449a8119f00d74ae9c2efa79f8ef9994261fc2/pytz-2023.3.post1-py2.py3-none-any.whl.metadata
+  Downloading pytz-2023.3.post1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.1 (from pandas)
+  Downloading tzdata-2023.3-py2.py3-none-any.whl (341 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 341.8/341.8 kB 8.3 MB/s eta 0:00:00
+Collecting scipy>=1.5.0 (from scikit-learn)
+  Obtaining dependency information for scipy>=1.5.0 from https://files.pythonhosted.org/packages/a8/cc/c36f3439f5d47c3b13833ce6687b43a040cc7638c502ac46b41e2d4f3d6f/scipy-1.11.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Downloading scipy-1.11.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (59 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.1/59.1 kB 1.1 MB/s eta 0:00:00
+Collecting joblib>=1.1.1 (from scikit-learn)
+  Obtaining dependency information for joblib>=1.1.1 from https://files.pythonhosted.org/packages/10/40/d551139c85db202f1f384ba8bcf96aca2f329440a844f924c8a0040b6d02/joblib-1.3.2-py3-none-any.whl.metadata
+  Downloading joblib-1.3.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting threadpoolctl>=2.0.0 (from scikit-learn)
+  Obtaining dependency information for threadpoolctl>=2.0.0 from https://files.pythonhosted.org/packages/81/12/fd4dea011af9d69e1cad05c75f3f7202cdcbeac9b712eea58ca779a72865/threadpoolctl-3.2.0-py3-none-any.whl.metadata
+  Downloading threadpoolctl-3.2.0-py3-none-any.whl.metadata (10.0 kB)
+Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib)
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Downloading matplotlib-3.7.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 80.3 MB/s eta 0:00:00
+Downloading pandas-2.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.7/12.7 MB 56.4 MB/s eta 0:00:00
+Downloading scikit_learn-1.3.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.8/10.8 MB 80.4 MB/s eta 0:00:00
+Downloading contourpy-1.1.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (300 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 300.7/300.7 kB 7.1 MB/s eta 0:00:00
+Downloading fonttools-4.42.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 67.1 MB/s eta 0:00:00
+Downloading joblib-1.3.2-py3-none-any.whl (302 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 302.2/302.2 kB 6.7 MB/s eta 0:00:00
+Downloading kiwisolver-1.4.5-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 22.5 MB/s eta 0:00:00
+Downloading Pillow-10.0.0-cp310-cp310-manylinux_2_28_x86_64.whl (3.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 33.2 MB/s eta 0:00:00
+Downloading pytz-2023.3.post1-py2.py3-none-any.whl (502 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 502.5/502.5 kB 13.1 MB/s eta 0:00:00
+Downloading scipy-1.11.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (36.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 36.3/36.3 MB 17.8 MB/s eta 0:00:00
+Downloading threadpoolctl-3.2.0-py3-none-any.whl (15 kB)
+Installing collected packages: pytz, tzdata, threadpoolctl, six, scipy, pyparsing, pillow, packaging, kiwisolver, joblib, fonttools, cycler, contourpy, scikit-learn, python-dateutil, pandas, matplotlib
+Successfully installed contourpy-1.1.0 cycler-0.11.0 fonttools-4.42.1 joblib-1.3.2 kiwisolver-1.4.5 matplotlib-3.7.2 packaging-23.1 pandas-2.1.0 pillow-10.0.0 pyparsing-3.0.9 python-dateutil-2.8.2 pytz-2023.3.post1 scikit-learn-1.3.0 scipy-1.11.2 six-1.16.0 threadpoolctl-3.2.0 tzdata-2023.3
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ sbatch example_gpu.sh
+Submitted batch job 3932231
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ watch squeue -u $USER
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ less test_job.stderr.txt
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ pip install torch
+Collecting torch
+  Downloading torch-2.0.1-cp310-cp310-manylinux1_x86_64.whl (619.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 619.9/619.9 MB 8.5 MB/s eta 0:00:00
+Collecting filelock (from torch)
+  Obtaining dependency information for filelock from https://files.pythonhosted.org/packages/52/90/45223db4e1df30ff14e8aebf9a1bf0222da2e7b49e53692c968f36817812/filelock-3.12.3-py3-none-any.whl.metadata
+  Downloading filelock-3.12.3-py3-none-any.whl.metadata (2.7 kB)
+Collecting typing-extensions (from torch)
+  Obtaining dependency information for typing-extensions from https://files.pythonhosted.org/packages/ec/6b/63cc3df74987c36fe26157ee12e09e8f9db4de771e0f3404263117e75b95/typing_extensions-4.7.1-py3-none-any.whl.metadata
+  Downloading typing_extensions-4.7.1-py3-none-any.whl.metadata (3.1 kB)
+Collecting sympy (from torch)
+  Using cached sympy-1.12-py3-none-any.whl (5.7 MB)
+Collecting networkx (from torch)
+  Using cached networkx-3.1-py3-none-any.whl (2.1 MB)
+Collecting jinja2 (from torch)
+  Using cached Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Collecting nvidia-cuda-nvrtc-cu11==11.7.99 (from torch)
+  Using cached nvidia_cuda_nvrtc_cu11-11.7.99-2-py3-none-manylinux1_x86_64.whl (21.0 MB)
+Collecting nvidia-cuda-runtime-cu11==11.7.99 (from torch)
+  Using cached nvidia_cuda_runtime_cu11-11.7.99-py3-none-manylinux1_x86_64.whl (849 kB)
+Collecting nvidia-cuda-cupti-cu11==11.7.101 (from torch)
+  Using cached nvidia_cuda_cupti_cu11-11.7.101-py3-none-manylinux1_x86_64.whl (11.8 MB)
+Collecting nvidia-cudnn-cu11==8.5.0.96 (from torch)
+  Using cached nvidia_cudnn_cu11-8.5.0.96-2-py3-none-manylinux1_x86_64.whl (557.1 MB)
+Collecting nvidia-cublas-cu11==11.10.3.66 (from torch)
+  Using cached nvidia_cublas_cu11-11.10.3.66-py3-none-manylinux1_x86_64.whl (317.1 MB)
+Collecting nvidia-cufft-cu11==10.9.0.58 (from torch)
+  Using cached nvidia_cufft_cu11-10.9.0.58-py3-none-manylinux1_x86_64.whl (168.4 MB)
+Collecting nvidia-curand-cu11==10.2.10.91 (from torch)
+  Using cached nvidia_curand_cu11-10.2.10.91-py3-none-manylinux1_x86_64.whl (54.6 MB)
+Collecting nvidia-cusolver-cu11==11.4.0.1 (from torch)
+  Using cached nvidia_cusolver_cu11-11.4.0.1-2-py3-none-manylinux1_x86_64.whl (102.6 MB)
+Collecting nvidia-cusparse-cu11==11.7.4.91 (from torch)
+  Using cached nvidia_cusparse_cu11-11.7.4.91-py3-none-manylinux1_x86_64.whl (173.2 MB)
+Collecting nvidia-nccl-cu11==2.14.3 (from torch)
+  Using cached nvidia_nccl_cu11-2.14.3-py3-none-manylinux1_x86_64.whl (177.1 MB)
+Collecting nvidia-nvtx-cu11==11.7.91 (from torch)
+  Using cached nvidia_nvtx_cu11-11.7.91-py3-none-manylinux1_x86_64.whl (98 kB)
+Collecting triton==2.0.0 (from torch)
+  Downloading triton-2.0.0-1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (63.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.3/63.3 MB 23.6 MB/s eta 0:00:00
+Requirement already satisfied: setuptools in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch) (68.0.0)
+Requirement already satisfied: wheel in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch) (0.38.4)
+Collecting cmake (from triton==2.0.0->torch)
+  Obtaining dependency information for cmake from https://files.pythonhosted.org/packages/94/87/68536d2dde5acec492742c63bb71f43534eb7d3d83122cce3067c4abca2b/cmake-3.27.4.1-py2.py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata
+  Downloading cmake-3.27.4.1-py2.py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.7 kB)
+Collecting lit (from triton==2.0.0->torch)
+  Using cached lit-16.0.6.tar.gz (153 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting MarkupSafe>=2.0 (from jinja2->torch)
+  Obtaining dependency information for MarkupSafe>=2.0 from https://files.pythonhosted.org/packages/12/b3/d9ed2c0971e1435b8a62354b18d3060b66c8cb1d368399ec0b9baa7c0ee5/MarkupSafe-2.1.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Downloading MarkupSafe-2.1.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.0 kB)
+Collecting mpmath>=0.19 (from sympy->torch)
+  Using cached mpmath-1.3.0-py3-none-any.whl (536 kB)
+Using cached filelock-3.12.3-py3-none-any.whl (11 kB)
+Using cached typing_extensions-4.7.1-py3-none-any.whl (33 kB)
+Downloading MarkupSafe-2.1.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+Using cached cmake-3.27.4.1-py2.py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (26.1 MB)
+Building wheels for collected packages: lit
+  Building wheel for lit (pyproject.toml) ... done
+  Created wheel for lit: filename=lit-16.0.6-py3-none-any.whl size=93584 sha256=ec9117e6863b7cadd011d4ae83102f1d033733dbf3537002c1fc495d5395c0a5
+  Stored in directory: /ceph/chpc/home/hosseinzadehkassani/.cache/pip/wheels/14/f9/07/bb2308587bc2f57158f905a2325f6a89a2befa7437b2d7e137
+Successfully built lit
+Installing collected packages: mpmath, lit, cmake, typing-extensions, sympy, nvidia-nvtx-cu11, nvidia-nccl-cu11, nvidia-cusparse-cu11, nvidia-curand-cu11, nvidia-cufft-cu11, nvidia-cuda-runtime-cu11, nvidia-cuda-nvrtc-cu11, nvidia-cuda-cupti-cu11, nvidia-cublas-cu11, networkx, MarkupSafe, nvidia-cusolver-cu11, nvidia-cudnn-cu11, jinja2, filelock, triton, torch
+Successfully installed MarkupSafe-2.1.3 cmake-3.27.4.1 filelock-3.12.3 jinja2-3.1.2 lit-16.0.6 mpmath-1.3.0 networkx-3.1 nvidia-cublas-cu11-11.10.3.66 nvidia-cuda-cupti-cu11-11.7.101 nvidia-cuda-nvrtc-cu11-11.7.99 nvidia-cuda-runtime-cu11-11.7.99 nvidia-cudnn-cu11-8.5.0.96 nvidia-cufft-cu11-10.9.0.58 nvidia-curand-cu11-10.2.10.91 nvidia-cusolver-cu11-11.4.0.1 nvidia-cusparse-cu11-11.7.4.91 nvidia-nccl-cu11-2.14.3 nvidia-nvtx-cu11-11.7.91 sympy-1.12 torch-2.0.1 triton-2.0.0 typing-extensions-4.7.1
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ sbatch example_gpu.sh
+Submitted batch job 3932232
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ watch squeue -u $USER
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ less test_job.stderr.txt
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ pip install tqdm
+Collecting tqdm
+  Obtaining dependency information for tqdm from https://files.pythonhosted.org/packages/00/e5/f12a80907d0884e6dff9c16d0c0114d81b8cd07dc3ae54c5e962cc83037e/tqdm-4.66.1-py3-none-any.whl.metadata
+  Downloading tqdm-4.66.1-py3-none-any.whl.metadata (57 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.6/57.6 kB 1.3 MB/s eta 0:00:00
+Downloading tqdm-4.66.1-py3-none-any.whl (78 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.3/78.3 kB 2.4 MB/s eta 0:00:00
+Installing collected packages: tqdm
+Successfully installed tqdm-4.66.1
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ sbatch example_gpu.sh
+Submitted batch job 3932233
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ watch squeue -u $USER
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ less test_job.stderr.txt
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ pip install -monai-weekly[einops, gdown, nibabel, tqdm, ignite]
+
+Usage:
+  pip install [options] <requirement specifier> [package-index-options] ...
+  pip install [options] -r <requirements file> [package-index-options] ...
+  pip install [options] [-e] <vcs project url> ...
+  pip install [options] [-e] <local project path> ...
+  pip install [options] <archive url/path> ...
+
+no such option: -m
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ pip install -q  -monai-weekly[einops, gdown, nibabel, tqdm, ignite]
+
+Usage:
+  pip install [options] <requirement specifier> [package-index-options] ...
+  pip install [options] -r <requirements file> [package-index-options] ...
+  pip install [options] [-e] <vcs project url> ...
+  pip install [options] [-e] <local project path> ...
+  pip install [options] <archive url/path> ...
+
+no such option: -m
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ pip install -q "monai-weekly[einops, gdown, nibabel, tqdm, ignite]"
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ sbatch example_gpu.sh
+Submitted batch job 3932234
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ watch squeue -u $USER
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ less test_job.stderr.txt
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ pip isntall torchvision
+ERROR: unknown command "isntall" - maybe you meant "install"
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ pip install torchvision
+Collecting torchvision
+  Downloading torchvision-0.15.2-cp310-cp310-manylinux1_x86_64.whl (6.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.0/6.0 MB 16.7 MB/s eta 0:00:00
+Requirement already satisfied: numpy in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from torchvision) (1.25.2)
+Requirement already satisfied: requests in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from torchvision) (2.31.0)
+Requirement already satisfied: torch==2.0.1 in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from torchvision) (2.0.1)
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from torchvision) (10.0.0)
+Requirement already satisfied: filelock in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from torch==2.0.1->torchvision) (3.12.3)
+Requirement already satisfied: typing-extensions in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from torch==2.0.1->torchvision) (4.7.1)
+Requirement already satisfied: sympy in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from torch==2.0.1->torchvision) (1.12)
+Requirement already satisfied: networkx in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from torch==2.0.1->torchvision) (3.1)
+Requirement already satisfied: jinja2 in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from torch==2.0.1->torchvision) (3.1.2)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu11==11.7.99 in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from torch==2.0.1->torchvision) (11.7.99)
+Requirement already satisfied: nvidia-cuda-runtime-cu11==11.7.99 in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from torch==2.0.1->torchvision) (11.7.99)
+Requirement already satisfied: nvidia-cuda-cupti-cu11==11.7.101 in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from torch==2.0.1->torchvision) (11.7.101)
+Requirement already satisfied: nvidia-cudnn-cu11==8.5.0.96 in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from torch==2.0.1->torchvision) (8.5.0.96)
+Requirement already satisfied: nvidia-cublas-cu11==11.10.3.66 in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from torch==2.0.1->torchvision) (11.10.3.66)
+Requirement already satisfied: nvidia-cufft-cu11==10.9.0.58 in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from torch==2.0.1->torchvision) (10.9.0.58)
+Requirement already satisfied: nvidia-curand-cu11==10.2.10.91 in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from torch==2.0.1->torchvision) (10.2.10.91)
+Requirement already satisfied: nvidia-cusolver-cu11==11.4.0.1 in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from torch==2.0.1->torchvision) (11.4.0.1)
+Requirement already satisfied: nvidia-cusparse-cu11==11.7.4.91 in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from torch==2.0.1->torchvision) (11.7.4.91)
+Requirement already satisfied: nvidia-nccl-cu11==2.14.3 in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from torch==2.0.1->torchvision) (2.14.3)
+Requirement already satisfied: nvidia-nvtx-cu11==11.7.91 in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from torch==2.0.1->torchvision) (11.7.91)
+Requirement already satisfied: triton==2.0.0 in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from torch==2.0.1->torchvision) (2.0.0)
+Requirement already satisfied: setuptools in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch==2.0.1->torchvision) (68.0.0)
+Requirement already satisfied: wheel in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch==2.0.1->torchvision) (0.38.4)
+Requirement already satisfied: cmake in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from triton==2.0.0->torch==2.0.1->torchvision) (3.27.4.1)
+Requirement already satisfied: lit in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from triton==2.0.0->torch==2.0.1->torchvision) (16.0.6)
+Requirement already satisfied: charset-normalizer<4,>=2 in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from requests->torchvision) (3.2.0)
+Requirement already satisfied: idna<4,>=2.5 in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from requests->torchvision) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from requests->torchvision) (2.0.4)
+Requirement already satisfied: certifi>=2017.4.17 in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from requests->torchvision) (2023.7.22)
+Requirement already satisfied: MarkupSafe>=2.0 in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from jinja2->torch==2.0.1->torchvision) (2.1.3)
+Requirement already satisfied: mpmath>=0.19 in /ceph/chpc/home/hosseinzadehkassani/miniconda3/envs/pytorch_env/lib/python3.10/site-packages (from sympy->torch==2.0.1->torchvision) (1.3.0)
+Installing collected packages: torchvision
+Successfully installed torchvision-0.15.2
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ sbatch example_gpu.sh
+Submitted batch job 3932235
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ watch squeue -u $USER
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ less test_job.stderr.txt
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ less test_job.stdout.txt
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ less test_job.stderr.txt
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ pip install multiprocessing
+Collecting multiprocessing
+  Downloading multiprocessing-2.6.2.1.tar.gz (108 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 108.0/108.0 kB 2.5 MB/s eta 0:00:00
+  Preparing metadata (setup.py) ... error
+  error: subprocess-exited-with-error
+
+  × python setup.py egg_info did not run successfully.
+  │ exit code: 1
+  ╰─> [7 lines of output]
+      Traceback (most recent call last):
+        File "<string>", line 2, in <module>
+        File "<pip-setuptools-caller>", line 34, in <module>
+        File "/tmp/pip-install-derr4mmb/multiprocessing_d7d5162828e94622ab36783663246198/setup.py", line 94
+          print 'Macros:'
+          ^^^^^^^^^^^^^^^
+      SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ w
+ 10:25:50 up 141 days, 18:06, 15 users,  load average: 0.24, 0.34, 0.42
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+petrescu pts/1    10.39.191.84     01Sep23 19:56   0.17s  0.26s sshd: petrescu [priv]
+panxiao  pts/9    10.39.191.17     Tue16   22:46m  0.14s  0.14s -bash
+nrg-svc- pts/10   10.11.11.123     08:49    1:36m  0.03s  0.03s -bash
+panxiao  pts/35   10.39.191.17     Wed11   19:04m  0.24s  0.18s -bash
+chwa     pts/3    10.224.1.99      00:41    9:37m  0.59s  0.00s srun -N 1 -n 8 --mem 16G --time 24:00:00 --pty bash
+chwa     pts/4    10.224.1.99      00:09   10:09m  1.09s  0.00s srun -N 1 -n 8 --mem 16G --time 24:00:00 --pty bash
+chwa     pts/5    10.224.1.99      00:10   10:07m  0.46s  0.00s srun -N 1 -n 8 --mem 16G --time 24:00:00 --pty bash
+chwa     pts/6    10.224.1.99      00:51    9:24m  0.58s  0.00s srun -N 1 -n 8 --mem 16G --time 24:00:00 --pty bash
+petrescu pts/194  10.39.191.84     24Aug23 13days 13.74s  0.51s sshd: petrescu [priv]
+hosseinz pts/7    10.20.78.46      08:49    6.00s  0.33s  0.03s w
+hodgem   pts/11   10.11.11.123     08:49    1:36m  0.03s  0.03s -bash
+nrg-svc- pts/13   10.11.11.123     08:49    1:35m  0.03s  0.03s -bash
+loseille pts/14   10.39.168.147    Fri11   47:15m  0.10s  0.10s -bash
+zhehao.z pts/19   10.39.80.117     Fri15    4days  0.08s  0.08s -bash
+sungminh pts/28   10.39.191.56     Fri14   17:01m  2.31s  2.31s -bash
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ ls
+data  example_gpu.sh  test_gpu_pytorch_monai_segmentation.py  test_job.stderr.txt  test_job.stdout.txt
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ less test_job.stderr.txt
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ sbatch example_gpu.sh
+Submitted batch job 3932236
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ watch squeue -u $USER
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ less test_job.stderr.txt
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ sbatch example_gpu.sh
+Submitted batch job 3932237
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ watch squeue -u $USER
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ tail -f test_job.stdout.txt
+transformers version: NOT INSTALLED or UNKNOWN VERSION.
+mlflow version: NOT INSTALLED or UNKNOWN VERSION.
+pynrrd version: NOT INSTALLED or UNKNOWN VERSION.
+clearml version: NOT INSTALLED or UNKNOWN VERSION.
+
+For details about installing the optional dependencies, please visit:
+    https://docs.monai.io/en/latest/installation.html#installing-the-recommended-dependencies
+
+#training samples: 28, #validation samples: 7, #test samples: 9
+----------------------------------------------------------------------------------------------------
+alling the optional dependencies, please visit:
+    https://docs.monai.io/en/latest/installation.html#installing-the-recommended-dependencies
+
+#training samples: 28, #validation samples: 7, #test samples: 9
+----------------------------------------------------------------------------------------------------
+--------------------------------------------------------------
+Begin Slurm Epilogue Thu Sep  7 10:31:53 CDT 2023 1694100713
+Name                : test_job
+User                : hosseinzadehkassani
+Partition           : gpu
+Nodes               : gpu03
+Cores               : 1
+State               : FAILED
+Submit              : 2023-09-07T10:31:00
+Start               : 2023-09-07T10:31:09
+End                 : 2023-09-07T10:31:51
+Reserved Walltime   : 7-00:00:00
+Used Walltime       :   00:00:42
+Used CPU Time       : --
+% User (Computation): --
+% System (I/O)      : --
+Mem Reserved        : 6000M
+Max Mem Used        : 0.00  (0.0)
+Max Disk Write      : 0.00  (0.0)
+Max Disk Read       : 0.00  (0.0)
+Max-Mem-Used Node   :
+Max-Disk-Write Node :
+Max-Disk-Read Node  :
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    GPU Performance Statistics
+--------------------------------------------------------------
+GPU Model: Tesla V100S-PCIE-32GB
+End Slurm Epilogue Thu Sep  7 10:31:54 CDT 2023 1694100714
+--------------------------------------------------------------
+q
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ less test_job.stderr.txt
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ ls -lah -t
+total 30K
+drwxr-xr-x  4 hosseinzadehkassani domain users    6 Sep  7 10:31 .
+-rw-r--r--  1 hosseinzadehkassani domain users 2.9K Sep  7 10:31 test_job.stdout.txt
+-rw-r--r--  1 hosseinzadehkassani domain users 2.1K Sep  7 10:31 test_job.stderr.txt
+drwxr-xr-x  2 hosseinzadehkassani domain users    0 Sep  7 10:31 UNet_trained_model
+-rw-r--r--  1 hosseinzadehkassani domain users  23K Sep  7 10:30 test_gpu_pytorch_monai_segmentation.py
+drwx------ 20 hosseinzadehkassani domain users   31 Sep  7 10:22 ..
+-rw-r--r--  1 hosseinzadehkassani domain users 1.2K Sep  7 10:00 example_gpu.sh
+drwxr-xr-x  7 hosseinzadehkassani domain users    5 Sep  7 09:54 data
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ vi example_gpu.sh
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ sbatch example_gpu.sh
+Submitted batch job 3932239
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ watch squeue -u $USER
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ tail -f test_job.stdout.txt
+Python: 3.10.12 (main, Jul  5 2023, 18:54:27) [GCC 11.2.0]
+Numpy: 1.25.2
+torch 2.0.1+cu117
+2.0.1+cu117
+11.7
+8500
+True
+1
+0
+Tesla V100S-PCIE-32GB
+
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ watch squeue -u $USER
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ less test_job.stderr.txt
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$
