@@ -1,0 +1,142 @@
+ssh hosseinzadehkassani@login3.chpc.wustl.edu
+===============================================================================
+Jupyter notebook
+ssh hosseinzadehkassani@login3-02.chpc.wustl.edu
+srun -w gpu09 --time=24:00:00 --partition=gpu_iso --qos=gpu_32_168h --pty bash
+
+In a new terminal:
+ssh -L localhost:8080:localhost:6000 hosseinzadehkassani@login3-02.chpc.wustl.edu
+ssh -L localhost:6000:localhost:6000 hosseinzadehkassani@gpu09
+
+cd /ceph/chpc/shared/raji_group/DL_projects/ && conda activate pytorch_env && jupyter lab --no-browser --port=6000
+
+cd /ceph/chpc/shared/raji_group/DL_projects/ && conda activate pytorch_env && jupyter notebook --no-browser --port=6000
+
+
+
+cd /ceph/chpc/shared/raji_group/DL_projects/
+conda activate pytorch_env
+jupyter notebook --no-browser --port=6000
+
+watch -n 10 nvidia-smi
+
+
+######### install miniconda ######### https://docs.conda.io/projects/miniconda/en/latest/
+
+[hosseinzadehkassani@login02 ~]$ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+[hosseinzadehkassani@login02 ~]$ chmod +x Miniconda3-latest-Linux-x86_64.sh
+[hosseinzadehkassani@login02 ~]$ ./Miniconda3-latest-Linux-x86_64.sh
+===============================================================================
+[hosseinzadehkassani@login02 ~]$ source ~/.bashrc
+(base) [hosseinzadehkassani@login02 ~]$ conda create -n pytorch_env python=3.10
+(base) [hosseinzadehkassani@login02 ~]$ pip install monai
+(base) [hosseinzadehkassani@login02 ~]$ conda activate pytorch_env
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ module list
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ module avail
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ module load cud
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ sbatch example_gpu.sh
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ squeue -u $USER
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ watch squeue -u $USER
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ scancel -u $USER
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ squeue -u $USER
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ sinfo
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ squeue -t running | head
+(pytorch_env) [hosseinzadehkassani@login02 ~]$ scontrol show jobid=3855509
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ vi example_gpu.sh        ### (esc ==> :wq)
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ sbatch example_gpu.sh
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ watch squeue -u $USER
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ less test_job.stderr.txt
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ watch squeue -u $USER
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ ls -lah -t ~       ### see the permission
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ source ~/.bashrc
+(base) [hosseinzadehkassani@login02 vat_sat]$ conda activate pytorch_env
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ pip install numpy
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ less test_gpu_pytorch_monai_segmentation.py
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ pip install -q "monai-weekly[einops, gdown, nibabel, tqdm, ignite]"
+===============================================================================
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ pip install multiprocessing
+===============================================================================
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ sbatch example_gpu.sh
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ watch squeue -u $USER
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ less test_job.stderr.txt
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ less test_job.stdout.txt
+===============================================================================
+(pytorch_env) [hosseinzadehkassani@login02 vat_sat]$ tail -f test_job.stdout.txt    ###(q)
+===============================================================================
+
+scontrol show partition gpu_iso
+srun -w gpu09 --time=1:00:00 --pty bash
+===============================================================================
+ssh gpu09
+(base) [hosseinzadehkassani@gpu09 vat_sat]$
+===============================================================================
+check_group_quota cyrus_raji
+check_user_quota hosseinzadehkassani
+===============================================================================
+Jupyter notebook
+
+ssh hosseinzadehkassani@login3-02.chpc.wustl.edu
+srun -w gpu09 --time=00:10:00 --partition=gpu_iso --qos=gpu_32_168h --pty bash
+
+
+In a new terminal:
+ssh -L localhost:8080:localhost:6000 hosseinzadehkassani@login3-02.chpc.wustl.edu
+ssh -L localhost:6000:localhost:6000 hosseinzadehkassani@gpu09
+conda activate pytorch_env
+cd to the shared folder
+jupyter notebook --no-browser --port=6000
+
+
+
+==========================================================================================
+salloc -N 1 --gpus-per-node=1 -w gpu09 --partition=gpu_iso --gpus-per-node=1 --time=1:00:00 --qos=gpu_32_168h
+===============================================================================
+get the server info:
+sinfo
+
+get the info of a node:
+scontrol show node gpu09
+===============================================================================
+salloc -N 1 --gpus-per-node=1 -w gpu09 --partition=gpu_iso --gpus-per-node=1 --time=1:00:00 --qos=gpu_32_168h
+
+
+
+
+jupyter notebook --no-browser --port=8080
+
+/ceph/chpc/shared/raji_group/
+===============================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===============================================================================
+NOT USED
+
+scontrol show partition gpu_iso
+srun -w gpu09 --time=1:00:00 --pty bash
+===============================================================================cd 
+
+
+
+ 
+
+
